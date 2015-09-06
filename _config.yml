@@ -1,27 +1,27 @@
-title:            HPSTR Theme
-description:      A responsive Jekyll theme with modern tendencies from designer Michael Rose.
+title:            Development Ramblings
+description:      Just trying to keep the quality philosophy separated from tech ramblings
 disqus_shortname: hpstrtheme
 reading_time:     true
 words_per_minute: 200
-url:              //mmistakes.github.io/hpstr-jekyll-theme
+url:              //sabinmarcu.github.io/dev-blog
 
 # Owner/author information
 owner:
-  name:           Michael Rose
+  name:           Sabin Marcu
   avatar:         avatar.jpg
-  bio:            "Just another boring, tattooed, time traveling designer hailing from Buffalo New York."
-  email:          
+  bio:            "Nothing yet"
+  email:          sabinmarcu@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        mmistakes
-  facebook:       
-  github:         mmistakes
-  stackexchange:  
-  linkedin:       
+  twitter:        sabinmarcu
+  facebook:       sabinmarcu
+  github:         sabinmarcu
+  stackexchange:  sabinmarcu
+  linkedin:       sabinmarcu
   instagram:        
   flickr:         
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus:    +MichaelRoseDesign
+  google_plus:    +SabinMarcu
 
 # Background image to be tiled on all pages
 background:
@@ -33,7 +33,7 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Europe/Bucharest
 future:      true
 highlighter: pygments
 markdown:    kramdown
