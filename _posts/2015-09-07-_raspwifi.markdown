@@ -29,25 +29,25 @@ Some tips I can give to people...
 3. Create some of your own boot scripts so that you may switch modes whenver you want. For example, I had something like:
 
 {% highlight sh %}
-    #!/bin/bash
+#!/bin/bash
 
-    # Switch network mode to "other", aka look for existing networks
-    # instead of broadcasting the secure dev backup
-    # File: other.sh
+# Switch network mode to "other", aka look for existing networks
+# instead of broadcasting the secure dev backup
+# File: other.sh
 
-    # Shut down the APN services
-    sudo service hostapd stop
-    sudo service udhcpd stop
+# Shut down the APN services
+sudo service hostapd stop
+sudo service udhcpd stop
 
-    # Switch interfaces (so I don't have to do IPs and modes manually) – note, backups exist in .other and .own format
-    sudo cp /etc/networks/interfaces.other /etc/networks/interfaces
+# Switch interfaces (so I don't have to do IPs and modes manually) – note, backups exist in .other and .own format
+sudo cp /etc/networks/interfaces.other /etc/networks/interfaces
 
-    # Restart networking to start looking for other networks
-    sudo /etc/init.d/networking restert
+# Restart networking to start looking for other networks
+sudo /etc/init.d/networking restert
 
-    # Or this, why not?
-    # sudo ifdown --force wlan0
-    # sudo ifup wlan0
+# Or this, why not?
+# sudo ifdown --force wlan0
+# sudo ifup wlan0
 {% endhighlight %}
     
 to use to stop broadcasting its own network, and start looking for configured ones (be a consumer). Normally, if you try to run this through **ssh**, you might fail due to the connection being broken before setting the interfaces, for example. A simple fix is to use **screen** to deal with it, like so: `screen -bm bash other.sh`
