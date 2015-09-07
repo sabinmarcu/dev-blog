@@ -28,7 +28,7 @@ Some tips I can give to people...
 
 3. Create some of your own boot scripts so that you may switch modes whenver you want. For example, I had something like:
 
-{highlight sh}
+{% highlight sh %}
     #!/bin/bash
 
     # Switch network mode to "other", aka look for existing networks
@@ -48,7 +48,7 @@ Some tips I can give to people...
     # Or this, why not?
     # sudo ifdown --force wlan0
     # sudo ifup wlan0
-{endhighlight}
+{% endhighlight %}
     
 to use to stop broadcasting its own network, and start looking for configured ones (be a consumer). Normally, if you try to run this through **ssh**, you might fail due to the connection being broken before setting the interfaces, for example. A simple fix is to use **screen** to deal with it, like so: `screen -bm bash other.sh`
 
