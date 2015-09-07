@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Starting up"
+date: "2015-09-07"
+description: "Reasoning behind this secondary blog"
+tags: [blog dev]
+---
+
+# Why another blog?
+
+Well, two reasons. I want to explain myself a bit, so I'll keep it short and simple for now.
+
+#### There are two reasons for creating a Dev blog
+
+* One is the obvious reason of separating normal blog posts with the more techy ones. To be fair, I needed a small change in layout anyway, and this theme and setup seemed awesome at the time.
+
+* Secondly, I've been posting a lot on Facebook, letting the world know on what I'm learning and my opinions and stuff... And some people suggested I start a blog instead – hint taken, I'll spamming your walls :)
+
+#### And well, we're here
+
+To be perfectly frank, I'll either spam the hell out of this blog, or ignore it like I usually do.
+
+
+
+## Time will tell
