@@ -1,0 +1,53 @@
+---
+layout: post
+title: "rasp-wifi"
+description: "The adventures of raspberry pi and the lord of wifi hotspots"
+date: "2015-09-07"
+tags: [updates, raspberry pi, wifi]
+---
+
+So... I'm going to start my ramblings by talking a bit about my trek through configuring a damn Raspberry Pi to work the way I wanted to. Specifically, I wanted to be able to SSH into the damn thing whenever I may so desire, regardless of what device I have with me or what networks I create...
+
+Note: throughout this post I'll be considering a complete lack of peripherals: keyboard, mouse, screen, etc. Anything other than the SD card and a WiFi dongle.
+
+#### That means making a hotspot out of the Pi itself
+
+Fortunately, I had one of the few adapters known to be able to host a network, so I started playing around... from around 00:00 in the night to about 6am. It wasn't working right.
+
+In the end, I now have a functional default behavior on the Pi: create a password-protected APN with `hostapd` and `udhcpd` to which I can connect, and configure the `wpa_supplicant` for any existing networks.
+
+This way, whenever I'm going somewhere new, I can just get the Pi out, connect to it with WiFi, configure a network, and then go online with both my laptop and Pi at the same time. It's a very good backup and boot for working with a Pi anywhere without keyboard and mouse and a screen and whatnot.
+
+I'll update in the morning with a link to the guide I followed.
+
+Some tips I can give to people...
+
+1. If you're configuring a static IP to use with `hostapd` and `udhcpd` do NOT allow hot swap for the interface (found at `/etc/network/interfaces`). It will mess things up, especially at boot.
+
+2. Do NOT attempt to do anything crazy, or confuse ad-hoc networks with APNs, routers, and so forth. The guide that I followed was meant to pipe an *ethernet* connection into a *wifi* one, but for the most part, excepting the `iptables` routing, everything was the same. All I needed was the networks. I have found, however, guides (reached via `raspberry pi create wifi ad-hoc network` type google queries) that teach you how to create a *local, rasp-only ad-hoc network*. In simpler terms, a **virtual network**, a **simulation**, and nothing more since it cannot reach any other device than the Pi, through any interface whatsoever. Which is fine. It is an ad-hoc network, and it might be useful in some cases. But it isn't what I wanted.
+
+3. Create some of your own boot scripts so that you may switch modes whenver you want. For example, I had something like:
+    ```sh
+    #!/bin/bash
+
+    # Switch network mode to "other", aka look for existing networks
+    # instead of broadcasting the secure dev backup
+    # File: other.sh
+
+    # Shut down the APN services
+    sudo service hostapd stop
+    sudo service udhcpd stop
+
+    # Switch interfaces (so I don't have to do IPs and modes manually) – note, backups exist in .other and .own format
+    sudo cp /etc/networks/interfaces.other /etc/networks/interfaces
+
+    # Restart networking to start looking for other networks
+    sudo /etc/init.d/networking restert
+
+    # Or this, why not?
+    # sudo ifdown --force wlan0
+    # sudo ifup wlan0
+    ```
+to use to stop broadcasting its own network, and start looking for configured ones (be a consumer). Normally, if you try to run this through **ssh**, you might fail due to the connection being broken before setting the interfaces, for example. A simple fix is to use **screen** to deal with it, like so: `screen -bm bash other.sh`
+
+Well, I'll update this in the morning with more juicy bits.
