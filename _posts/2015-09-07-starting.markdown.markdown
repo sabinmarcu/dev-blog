@@ -6,7 +6,7 @@ description: "Reasoning behind this secondary blog"
 tags: [blog dev]
 ---
 
-# Why another blog?
+Why another blog?
 
 Well, two reasons. I want to explain myself a bit, so I'll keep it short and simple for now.
 
