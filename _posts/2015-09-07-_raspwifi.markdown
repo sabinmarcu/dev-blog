@@ -63,25 +63,4 @@ sudo wpa_cli enable_network 0
     
 to use to stop broadcasting its own network, and start looking for configured ones (be a consumer). Normally, if you try to run this through **ssh**, you might fail due to the connection being broken before setting the interfaces, for example. A simple fix is to use **screen** to deal with it, like so: `screen -bm bash other.sh`
 
-{% highlight livescript %}
-_m = new WeakMap();
-
-_init    = (m) -> (if not _m.has m then _m.set m, new Map! else true) and _m.get m
-_refresh = (m) ->
-    (__m = _init m) and (...a) ->
-        (_r = m ...a) and (_a = JSON.stringify a) and (__m.set _a, _r) and _r
-_memo    = (m) ->
-    _rm = (__m = _init m) and (...a) ->
-        (_a = JSON.stringify a) and (if __m.has _a then __m.get _a else (
-            (_r = m ...a) and (__m.set _a, _r) and _r
-        ))
-        (_a = JSON.stringify a) and (if __m.has _a then __m.get _a else (
-            (_r = m ...a) and (__m.set _a, _r) and _r
-        ))
-    _rm.refresh = _refresh
-    _rm
-
-module.exports = _memo
-{% endhighlight %}
-
 Well, I'll update this in the morning with more juicy bits.
