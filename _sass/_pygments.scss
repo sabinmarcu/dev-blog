@@ -5,11 +5,11 @@
 	border: 1px solid #eee;
 	background-color: #fff;
 	@include rounded(3px);
-	-o-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1));
-	-ms-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1));
-	-moz-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1));
-	-webkit-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1));
-	box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1));
+	-o-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);
+	-ms-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);
+	-moz-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);
+	-webkit-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);
+	box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);
 	pre {
 		position: relative;
 		margin: 0;
