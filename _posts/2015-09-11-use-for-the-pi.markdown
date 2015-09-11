@@ -14,7 +14,7 @@ A few days ago, I described my [Trek through Raspberry Pi and Wifi configs (incl
 
 At first I wanted to use it to compile my apps, and serve them. Note, I'm using [WebPack](https://webpack.github.io/) to compile my app, with a lot of plugins on the way. I thought my Pi would be strong enough to do that, even at a slower pace, but after 10 minutes of waiting for webpack to boot, I gave up. Ironically, as per [Murphy's laws](http://murphyslaws.net/), as soon as I disconnected the Pi from a power source I saw that it finally made the initial compile. It wouldn't have been efficient anyway.
 
-#### My second idea then was to make it a remote (Spotify)[http://spotify.com] client. I didn't want much from it: just a command line interface so I could pick / skip a song, volume control was optional.
+#### My second idea then was to make it a remote [Spotify](http://spotify.com) client. I didn't want much from it: just a command line interface so I could pick / skip a song, volume control was optional.
 
 ---
 
@@ -58,7 +58,7 @@ and that will get rid of the installation problems you might have later on. This
 
 ## Enter Mopidy
 
-Mopidy is a nice wrapper over MPD, which (as linked above) is a media server of sorts. Mopidy will allow you to stream Spotify from a local server. I followed their [installation](https://docs.mopidy.com/en/latest/installation/) and [configuration](https://docs.mopidy.com/en/latest/config/) guides, especially those with regards to [the raspberry pi](https://docs.mopidy.com/en/latest/config/). Something that was not very clear from the instructions is that you actually need to install the **Spotify Extension** and a UI / client for it to work properly. I used the extension, **Mopify** web client and **ncmpcpp** as a gui client. Both kind of work the same, but different at the same time. Mopify *can access the Songs library*, and generally works better, while ncmpcpp works without http and *can only access playlists*. Both, however, work just fine with *next/previous/play|pause*. Here are the steps to get these started:
+Mopidy is a nice wrapper over MPD, which (as linked above) is a media server of sorts. Mopidy will allow you to stream Spotify from a local server. I followed their [installation](https://docs.mopidy.com/en/latest/installation/) and [configuration](https://docs.mopidy.com/en/latest/config/) guides, especially those with regards to [the raspberry pi](https://docs.mopidy.com/en/latest/config/). Something that was not very clear from the instructions is that you actually need to install the **Spotify Extension** and a UI / client for it to work properly. I used the extension, **Mopify** web client and **ncmpcpp** as a gui client. Both kind of work the same, but different at the same time. Mopify *can access the Songs library*, and generally works better, while ncmpcpp works without http and *can only access playlists*. Both, however, work just fine with *next/previous/play/pause*. Here are the steps to get these started:
 
 {% highlight sh %}
 # As far as apt-get is concerned, we can install the spotify extension and ncmpcpp
