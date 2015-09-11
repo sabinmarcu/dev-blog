@@ -2,11 +2,13 @@
 layout: post
 title: "Raspberry Pi - Wifi"
 description: "The adventures of raspberry pi and the lord of wifi hotspots"
-date: "2015-09-07"
+date: "2015-09-08"
 tags: [updates, raspberry pi, wifi]
 ---
 
 So... I'm going to start my ramblings by talking a bit about my trek through configuring a damn Raspberry Pi to work the way I wanted to. Specifically, I wanted to be able to SSH into the damn thing whenever I may so desire, regardless of what device I have with me or what networks I create...
+
+<!--more-->
 
 Note: throughout this post I'll be considering a complete lack of peripherals: keyboard, mouse, screen, etc. Anything other than the SD card and a WiFi dongle.
 
@@ -39,7 +41,7 @@ Some tips I can give to people...
 sudo service hostapd stop
 sudo service udhcpd stop
 
-# Switch interfaces (so I don't have to do IPs and modes manually) 
+# Switch interfaces (so I don't have to do IPs and modes manually)
 # – note, backups exist in .other and .own format
 sudo cp /etc/networks/interfaces.other /etc/networks/interfaces
 
@@ -50,17 +52,17 @@ sudo /etc/init.d/networking restert
 # sudo ifdown --force wlan0
 # sudo ifup wlan0
 
-# And now, just to make sure that network 0 is being enabled 
-# – note, this is pretty much hardcoded. Optimally, one should 
+# And now, just to make sure that network 0 is being enabled
+# – note, this is pretty much hardcoded. Optimally, one should
 # get at least the number of networks in wpa_supplicant,
-# iterate through them, and enable them. Also, note that this 
+# iterate through them, and enable them. Also, note that this
 # is not mandatory, as eventually wpa will connect you down the
 # road, especially if you're using wpa-roam instead of wpa-conf
 # in the interfaces file
 sudo wpa_cli enable_network 0
 
 {% endhighlight %}
-    
+
 to use to stop broadcasting its own network, and start looking for configured ones (be a consumer). Normally, if you try to run this through **ssh**, you might fail due to the connection being broken before setting the interfaces, for example. A simple fix is to use **screen** to deal with it, like so: `screen -bm bash other.sh`
 
 Well, I'll update this in the morning with more juicy bits.

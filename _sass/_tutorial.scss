@@ -1,0 +1,126 @@
+.tutorial {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 50px 40px;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    .toc {
+    	margin: 25px 0;
+    	transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    	-moz-transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    	-webkit-transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    	-o-transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    	-ms-transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        .inner {
+    		padding: 10px 15px;
+    		background-color: $white;
+    		box-shadow: 0 0 0 0, 0 6px 12px rgba($black,0.1);
+    		@include rounded(3px);
+            ol li {
+            	padding-left: 15px;
+            }
+            > ol > li {
+            	border-top: solid 1px #eee;
+            	padding-top: 5px;
+            	margin-top: 10px;
+            }
+            ol {
+                padding: 0;
+            }
+            > ol {
+                padding-left: 35px;
+            }
+            ol, ol li {
+                list-style-type: upper-roman;
+            }
+            ol ol, ol ol li {
+            	list-style-type: decimal;
+            }
+            ol ol ol, ol ol ol li {
+            	list-style-type: lower-alpha;
+            }
+        }
+    }
+    > .sidebar, > .entry-content {
+    	display: inline-block;
+    	flex: 1 100%;
+    }
+    > .sidebar {
+    	flex: 1 0 0;
+        margin: 40px 10px 0 0;
+		@media #{$large} {
+        	margin-top: 50px;
+        }
+    	padding: 0;
+    	max-width: 300px;
+    }
+    > .entry-content {
+    	flex: 2 0 0;
+    	max-width: 900px;
+        margin: 0;
+    }
+    > .sidebar#toc-bottom {
+        display: none !important;
+    }
+    img {
+    	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
+    	-webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    	-moz-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
+    	-ms-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
+    	-o-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
+    	margin: 10px 0;
+    }
+
+    img.noshadow {
+    	box-shadow: none;
+    	-webkit-box-shadow: none;
+    	-moz-box-shadow: none;
+    	-ms-box-shadow: none;
+    	-o-box-shadow: none;
+    }
+    ~ .center {
+        margin: 0 auto 50px auto !important;
+        max-width: 1200px !important;
+        > * {
+            margin: 0 40px !important;
+            display: block;
+            max-width: initial !important;
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .tutorial {
+		align-items: flex-start;
+		-webkit-align-items: flex-start;
+		align-content: stretch;
+		-webkit-align-content: stretch;
+        > .sidebar {
+    		margin: 15px 0;
+    		padding: 15px 0;
+    		width: 100%;
+    		margin-bottom: 25px;
+            max-width: initial;
+        }
+        > .sidebar#toc-bottom {
+            margin-top: 25px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            display: block !important;
+        }
+        > .sidebar, > .entry-content {
+    		display: inline-block;
+    		flex: 1 100%;
+        }
+        > .entry-content {
+            max-width: 100%;
+            margin: 0 !important;
+        }
+        ~ .read-more, ~ section#disqus_thread {
+            margin: 0 40px 50px 40px !important;
+        }
+    }
+}

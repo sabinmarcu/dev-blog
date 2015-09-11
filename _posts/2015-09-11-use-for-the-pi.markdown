@@ -8,19 +8,20 @@ image:
   feature: raspberrypi/rasp.jpg
   credit: wikipedia
   creditlink: https://www.wikiwand.com/simple/Raspberry_Pi
+excerpt_separator: "\n---\n"
 ---
 
-A few days ago, I described my [Trek through Raspberry Pi and Wifi configs (including APs)](/dev-blog/{% post_url 2015-09-07-_raspwifi %}). Today, I want to talk about a possible use for such a setup.
-
-At first I wanted to use it to compile my apps, and serve them. Note, I'm using [WebPack](https://webpack.github.io/) to compile my app, with a lot of plugins on the way. I thought my Pi would be strong enough to do that, even at a slower pace, but after 10 minutes of waiting for webpack to boot, I gave up. Ironically, as per [Murphy's laws](http://murphyslaws.net/), as soon as I disconnected the Pi from a power source I saw that it finally made the initial compile. It wouldn't have been efficient anyway.
-
-#### My second idea then was to make it a remote [Spotify](http://spotify.com) client. I didn't want much from it: just a command line interface so I could pick / skip a song, volume control was optional.
-
----
+A few days ago, I described my [Trek through Raspberry Pi and Wifi configs (including APs)]({{site.url}}{% post_url 2015-09-08-raspwifi %}). Today, I want to talk about a possible use for such a setup.
 
 ## TL;DR:
 
 The simple CLI I had in mind isn't working right now. I ended up using [MPD](http://www.musicpd.org/) (more exactly: [Mopidy](https://www.mopidy.com/)) with both a CLI client and a Web client, either of them work fine.
+
+<!--more-->
+
+At first I wanted to use it to compile my apps, and serve them. Note, I'm using [WebPack](https://webpack.github.io/) to compile my app, with a lot of plugins on the way. I thought my Pi would be strong enough to do that, even at a slower pace, but after 10 minutes of waiting for webpack to boot, I gave up. Ironically, as per [Murphy's laws](http://murphyslaws.net/), as soon as I disconnected the Pi from a power source I saw that it finally made the initial compile. It wouldn't have been efficient anyway.
+
+#### My second idea then was to make it a remote [Spotify](http://spotify.com) client. I didn't want much from it: just a command line interface so I could pick / skip a song, volume control was optional.
 
 Full process supplied below:
 
