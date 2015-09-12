@@ -9,6 +9,8 @@ image:
   credit: wikipedia
   creditlink: https://www.wikiwand.com/simple/Raspberry_Pi
 excerpt_separator: "\n---\n"
+redirect_from:
+     - /dev-blog/use-for-the-pi/
 ---
 
 A few days ago, I described my [Trek through Raspberry Pi and Wifi configs (including APs)]({{site.url}}{% post_url 2015-09-08-raspwifi %}). Today, I want to talk about a possible use for such a setup.

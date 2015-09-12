@@ -8,6 +8,8 @@ image:
 description: Virtual Box este o aplicație care își propune să vină în ajutorul nostru atunci când avem nevoie rapid și ușor de o mașină care să îndeplinească anumite specificații, atât hardware, cât și software.
 tags: [dev, tutorial, vagrant, romanian post]
 excerpt_separator: <!--more-->
+redirect_from:
+     - /dev-blog/ro/tutorial/tutorial-virtualbox/
 ---
 
 ## Introducere

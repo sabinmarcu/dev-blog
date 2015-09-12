@@ -8,6 +8,8 @@ image:
 description: "În ultimii ani, virtualizarea și standardizarea mașinilor virtuale a devenit un subiect din ce în ce mai dezbătut, și populat de diferite sisteme ce își doresc a face acest subiect o realitate cât mai accesibilă. Unul dintre aceste sisteme, realizat modular, este Vagarant"
 tags: [dev, tutorial, vagrant, virtualbox, romanian post]
 excerpt_separator: <!--more-->
+redirect_from:
+     - /dev-blog/ro/tutorial/tutorial-vagrant/
 ---
 
 ## Introducere

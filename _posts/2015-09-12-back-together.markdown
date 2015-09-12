@@ -5,6 +5,8 @@ date: "2015-09-12"
 tags: [dev, blog, updates]
 image:
     feature: headers/change.jpg
+redirect_from:
+    - /dev-blog/back-together/
 ---
 
 Yes, yes, yes, I know what you might say. It will probably be around the following:

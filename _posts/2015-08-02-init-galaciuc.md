@@ -6,6 +6,8 @@ description: "Prima zi de Gălăciuc"
 tags: [infoeducatie, julian, infoeducatie 2015]
 image:
     feature: headers/galaciuc.jpg
+redirect_from:
+     - /dev-blog/init-galaciuc/
 ---
 
 # Prima zi de Gălăciuc

@@ -6,6 +6,8 @@ date: "2015-09-08"
 tags: [dev, raspberry pi, wifi, rant]
 image:
     feature: headers/raspwifi.jpg
+redirect_from:
+     - /dev-blog/raspwifi/
 ---
 
 So... I'm going to start my ramblings by talking a bit about my trek through configuring a damn Raspberry Pi to work the way I wanted to. Specifically, I wanted to be able to SSH into the damn thing whenever I may so desire, regardless of what device I have with me or what networks I create...
