@@ -52,7 +52,7 @@ Un eveniment marcant a fost astăzi și **Ședința tehnică** ce (și îmi cer 
 
 ## Puțină istorie, dedicată acestui minunat eveniment:
 
-![Old Jazz]({{site.url}}/images/headers/galaciuc.jpg)
+![Old Jazz]({{site.baseurl}}/images/headers/galaciuc.jpg)
 
 Ghiciți cine este mândrul posesor și purtător al *cagulei*.
 

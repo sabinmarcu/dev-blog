@@ -70,7 +70,8 @@
     	-moz-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
     	-ms-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
     	-o-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
-    	margin: 10px 0;
+        margin: 10px 0 !important;
+        width: calc(100% - 16px) !important;
     }
 
     img.noshadow {
