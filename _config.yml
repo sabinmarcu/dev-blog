@@ -42,7 +42,6 @@ highlighter: pygments
 markdown:    kramdown
 gems:
   - jekyll-sitemap
-  - bourbon
 sass:
   sass_dir: _sass
   style: compressed
