@@ -79,6 +79,7 @@ $(document).ready(function() {
             };
             $(window).scroll(scrollFunc);
             $(window).resize(resizeFunc);
+            setInterval(resizeFunc, 1500);
             resizeFunc();
 
             $(".toc a").click(function() {
