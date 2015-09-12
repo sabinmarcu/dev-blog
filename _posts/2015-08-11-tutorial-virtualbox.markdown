@@ -2,11 +2,11 @@
 layout: tutorial
 title: "Tutorial VirtualBox"
 date: "2015-08-11"
-categories: tutorial
+categories: [ro, tutorial]
 image:
     feature: virtualbox/header.jpg
 description: Virtual Box este o aplicație care își propune să vină în ajutorul nostru atunci când avem nevoie rapid și ușor de o mașină care să îndeplinească anumite specificații, atât hardware, cât și software.
-tags: [tutorial, vagrant]
+tags: [dev, tutorial, vagrant, romanian post]
 excerpt_separator: <!--more-->
 ---
 

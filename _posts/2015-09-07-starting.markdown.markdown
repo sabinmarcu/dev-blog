@@ -3,7 +3,9 @@ layout: post
 title: "Starting up"
 date: "2015-09-07"
 description: "Reasoning behind this secondary blog"
-tags: [blog dev]
+tags: [blog, dev]
+image:
+    feature: headers/branching.jpg
 ---
 
 Why another blog?

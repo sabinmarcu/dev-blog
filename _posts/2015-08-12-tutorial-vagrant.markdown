@@ -1,12 +1,12 @@
 ---
 layout: tutorial
 title: "Tutorial Vagrant"
-date: "2015-08-01"
-categories: tutorial
+date: "2015-08-12"
+categories: [ro, tutorial]
 image:
     feature: vagrant/header.png
 description: "În ultimii ani, virtualizarea și standardizarea mașinilor virtuale a devenit un subiect din ce în ce mai dezbătut, și populat de diferite sisteme ce își doresc a face acest subiect o realitate cât mai accesibilă. Unul dintre aceste sisteme, realizat modular, este Vagarant"
-tags: [tutorial, vagrant, virtualbox]
+tags: [dev, tutorial, vagrant, virtualbox, romanian post]
 excerpt_separator: <!--more-->
 ---
 

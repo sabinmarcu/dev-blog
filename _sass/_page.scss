@@ -13,6 +13,18 @@ body {
 	h1, h2, h3, h4, h5, h6, p, li {
 		word-wrap: break-word;
 	}
+    .center {
+        margin: 0 auto 50px auto !important;
+        max-width: 1200px !important;
+        > * {
+            margin: 0 40px !important;
+            display: block;
+            max-width: initial !important;
+        }
+		&.first {
+			margin-top: 40px !important;
+		}
+    }
 }
 .entry-content {
 	@include font-size(16);
@@ -103,9 +115,9 @@ body {
 }
 .entry-image {
 	position: relative;
-	top: -50%; 
-	left: -50%; 
-	width: 200%; 
+	top: -50%;
+	left: -50%;
+	width: 200%;
 	height: 200%;
 	min-height: 400px;
 	overflow: hidden;
@@ -119,12 +131,12 @@ body {
 		background-color: rgba($base-color,0.3);
 	}
 	img {
-		position: absolute; 
-		top: 0; 
-		left: 0; 
-		right: 0; 
-		bottom: 0; 
-		margin: auto; 
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
 		min-width: 50%;
 		min-height: 400px; // match .entry-image min-height
 	}
@@ -314,7 +326,7 @@ header .entry-meta {
 	h3 {
 		margin: 0;
 		@include font-rem(28);
-		a { 
+		a {
 			color: $text-color;
 		}
 		@media #{$medium} {
@@ -328,11 +340,11 @@ header .entry-meta {
 .list-item {
 	width: 100%;
 	text-align: left;
-	h4 { 
+	h4 {
 		@include font-rem(18);
-		margin-bottom: 0; 
+		margin-bottom: 0;
 	}
-	span { 
+	span {
 		display: block;
 		@include font-rem(14);
 		color: lighten($base-color,50);
@@ -346,7 +358,7 @@ header .entry-meta {
 	}
 }
 
-// Post Index 
+// Post Index
 // --------------------------------------------------
 #post-index {
 	#main {
@@ -356,10 +368,14 @@ header .entry-meta {
 			margin-right: 20px;
 		}
 		@media #{$large} {
-			max-width: 800px;
 			margin-top: 50px;
 			margin-left: auto;
 			margin-right: auto;
+			text-align: center;
+		    display: flex;
+		    flex-flow: row wrap;
+			align-content: stretch;
+			justify-content: center;
 		}
 	}
 	article {
@@ -367,13 +383,23 @@ header .entry-meta {
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.1);
 		@include rounded(3px);
 		margin-bottom: 20px;
-		padding: 25px 15px;
+		padding: 25px 0;
 		@media #{$medium} {
 			padding: 30px;
 		}
 		@media #{$large} {
-			margin-bottom: 30px;
 			padding: 50px 80px;
+		    margin: 15px;
+		    max-width: 45%;
+		    display: inline-block;
+		    vertical-align: top;
+			text-align: left;
+			flex: 1 1 auto;
+		}
+	}
+	.pagination {
+		@media #{$large} {
+			flex: 2 2 100%;
 		}
 	}
 }
@@ -415,7 +441,7 @@ header .entry-meta {
 // --------------------------------------------------
 .socialcount {
 	@include font-rem(16);
-	li { 
+	li {
 		padding-left: 10px;
 		padding-right: 10px;
 	}

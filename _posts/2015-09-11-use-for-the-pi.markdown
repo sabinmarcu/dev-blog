@@ -3,7 +3,7 @@ layout: post
 title: "Use for the Pi"
 date: "2015-09-11"
 description: "One possible use for the Raspberry Pi"
-tags: [raspberry pi, music, mopidy, mopify, ncmpcpp]
+tags: [raspberry pi, music, mopidy, mopify, ncmpcpp, dev, rant]
 image:
   feature: raspberrypi/rasp.jpg
   credit: wikipedia

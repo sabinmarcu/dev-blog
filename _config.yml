@@ -1,11 +1,12 @@
 title:            Development Ramblings
 description:      Just trying to keep the quality philosophy separated from tech ramblings
-disqus_shortname: hpstrtheme
+disqus_shortname: sabinmarcu
 reading_time:     true
 words_per_minute: 200
-# url:              //sabinmarcu.github.io/dev-blog
-url:              //localhost:4000
-baseurl:          //localhost:4000
+url:              //sabinmarcu.github.io/dev-blog
+baseurl:              //sabinmarcu.github.io/dev-blog
+# url:              //localhost:4000
+# baseurl:          //localhost:4000
 
 # Owner/author information
 owner:
@@ -41,6 +42,7 @@ highlighter: pygments
 markdown:    kramdown
 gems:
   - jekyll-sitemap
+  - bourbon
 sass:
   sass_dir: _sass
   style: compressed
@@ -69,3 +71,4 @@ include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
 
 excerpt_separator: <!--more-->
+paginate: 6
