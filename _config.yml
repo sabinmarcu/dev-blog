@@ -3,10 +3,10 @@ description:      Just trying to keep the quality philosophy separated from tech
 disqus_shortname: sabinmarcu
 reading_time:     true
 words_per_minute: 200
- url:              //sabinmarcu.github.io
- baseurl:              //sabinmarcu.github.io
-#url:              //localhost:4000
-#baseurl:          //localhost:4000
+url:              //sabinmarcu.github.io
+baseurl:              //sabinmarcu.github.io
+# url:              //localhost:4000
+# baseurl:          //localhost:4000
 
 # Owner/author information
 owner:
