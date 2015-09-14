@@ -390,11 +390,10 @@ header .entry-meta {
 		@media #{$large} {
 			padding: 50px 80px;
 		    margin: 15px;
-		    max-width: 45%;
 		    display: inline-block;
 		    vertical-align: top;
-			text-align: left;
-			flex: 1 1 auto;
+		    text-align: left;
+		    flex: 1 1 45%;
 		}
 	}
 	.pagination {
