@@ -45,11 +45,11 @@ body {
 		box-shadow: 0 0 0 0, 0 0px 12px rgba($base-color,0.1);
 		left: 0;
 		right: 0;
-		height: $footer-size;
 		overflow: hidden;
 		padding: $footer-padding;
 		background: white;
 		transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+		cursor: default;
 		h2, h1 {
 			margin: 0;
 			padding: 0;
@@ -61,11 +61,51 @@ body {
 			transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 		}
 		&:hover {
-			height: 100px;
-			margin-top: -50px;
 			h2 {
 				color: #444;
 			}
+		}
+		ul {
+			display: flex;
+			flex-flow: row wrap;
+			align-content: stretch;
+			justify-content: space-between;
+			align-items: center;
+			margin: 10px 0;
+			padding: 0;
+			transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+			text-align: center;
+			overflow: hidden;
+			a {
+				display: block;
+				flex: 1 1 100px;
+			}
+			li {
+				background: #eee;
+				padding: 5px 15px;
+				margin: 10px;
+				color: #888;
+				list-style: none;
+				transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+				@include border-radius(4px,4px,4px,4px);
+				border: solid 1px #ccc;
+				&:hover {
+					background: #fff;
+					color: #444;
+					border-color: #000;
+					transform: scale(1.1);
+				}
+				&#problem:hover {
+					border-color: red;
+				}
+				&#addition:hover {
+					border-color: green;
+				}
+				&#omission:hover {
+					border-color: blue;
+				}
+			}
+
 		}
 	}
 	&::after {

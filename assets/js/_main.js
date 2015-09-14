@@ -50,19 +50,43 @@ $(document).ready(function() {
   if ($("#issue-me").length > 0) {
       var getBottom = function() {
           return $(window).scrollTop() + window.innerHeight - $(".entry-content").offset().top;
-      }, getHeight = function() {
-          var _i = jQuery("#issue-me");
+      }, getHeight = function(selector) {
+          var _i = jQuery(selector);
           return _i.height() + parseInt(_i.css("padding-top")) + parseInt(_i.css("padding-bottom"))
       }, getOffset = function() {
-          var _h = $(".entry-content").height();
-          return _h - getBottom() > 0 ? getBottom() : _h;
+          var _h = getHeight(".entry-content"), _r = _h - getBottom();
+          return _r > 0 ? _r : 0;
       };
       var scrollFunc = function() {
-          jQuery("#issue-me").css({"bottom": $(".entry-content").height() - getOffset() - getHeight()})
+          jQuery("#issue-me").css({"bottom": getOffset()})
+      };
+      var data = { height: -1 };
+      var refreshHeight = function() {
+          var _i = $("#issue-me ul");
+          _i.css({display: "flex", height: "auto"});
+          data.height = _i.height();
+          _i.css({"display": "none", height: "auto"});
+      };
+      var refreshFunc = function() {
+          refreshHeight();
+          scrollFunc();
       };
       $(window).scroll(scrollFunc);
-      $(window).resize(scrollFunc);
-      scrollFunc();
+      $(window).resize(refreshFunc);
+      $("#issue-me").hover(function() {
+          var _i = $("#issue-me ul");
+          _i.css({height: 0, display: "flex", "margin": 0});
+          setTimeout(function() {
+              _i.css({"height": data.height, margin: "10px 0"});
+          }, 50);
+      }, function() {
+          var _i = $("#issue-me ul");
+          _i.css({"height": 0, "margin": 0});
+          setTimeout(function() {
+              _i.css({"display": "none"});
+          }, 500);
+      });
+      refreshFunc();
   }
 
   if ($(".tutorial").length > 0) {
