@@ -75,7 +75,7 @@ body {
 			padding: 0;
 			transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 			text-align: center;
-			overflow: hidden;
+			overflow-y: hidden;
 			a {
 				display: block;
 				flex: 1 1 100px;
