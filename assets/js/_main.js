@@ -47,6 +47,24 @@ $(document).ready(function() {
     mainClass: 'mfp-fade'
   });
 
+  if ($("#issue-me").length > 0) {
+      var getBottom = function() {
+          return $(window).scrollTop() + window.innerHeight - $(".entry-content").offset().top;
+      }, getHeight = function() {
+          var _i = jQuery("#issue-me");
+          return _i.height() + parseInt(_i.css("padding-top")) + parseInt(_i.css("padding-bottom"))
+      }, getOffset = function() {
+          var _h = $(".entry-content").height();
+          return _h + getHeight() - getBottom() > 0 ? getBottom() : _h + getHeight();
+      };
+      var scrollFunc = function() {
+          jQuery("#issue-me").css({"bottom": "auto", "top": getOffset() - getHeight()})
+      };
+      $(window).scroll(scrollFunc);
+      $(window).resize(scrollFunc);
+      scrollFunc();
+  }
+
   if ($(".tutorial").length > 0) {
       var script = document.createElement("script");
       script.src = window.baseurl + "/assets/js/vendor/toc.js";

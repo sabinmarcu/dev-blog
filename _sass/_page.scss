@@ -27,6 +27,9 @@ body {
     }
 }
 .entry-content {
+	position: relative;
+	$footer-size: 50px;
+	$footer-padding: 10px 25px;
 	@include font-size(16);
 	// Dotted line underlines for links
 	p > a,
@@ -35,6 +38,32 @@ body {
 		&:hover {
 			border-bottom-style: solid;
 		}
+	}
+	#issue-me {
+		position: absolute;
+		bottom: 0;
+		box-shadow: 0 0 0 0, 0 0px 12px rgba($base-color,0.1);
+		left: 0;
+		right: 0;
+		height: $footer-size;
+		overflow: hidden;
+		padding: $footer-padding;
+		background: white;
+		transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+		h2, h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 1.2em;
+			font-weight: 100;
+		}
+		h2 {
+			color: #888;
+		}
+	}
+	&::after {
+		content: "";
+		height: $footer-size;
+		padding: $footer-padding;
 	}
 }
 
@@ -394,7 +423,7 @@ header .entry-meta {
 		    display: inline-block;
 		    vertical-align: top;
 			text-align: left;
-			flex: 1 1 auto;
+			flex: 1 1 45%;
 		}
 	}
 	.pagination {
