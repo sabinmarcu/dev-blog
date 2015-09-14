@@ -53,8 +53,9 @@
             <span class="author vcard"><span class="fn">{{ site.owner.name }}</span></span>{% endif %}
             {% if page.share != false %}{% include social-share.html %}{% endif %}
           </footer>
+          {% include issue-me.html %}
         </div><!-- /.entry-content -->
-        <div id="toc-bottom" class="toc sidebar"><div class="inner"loading table of contents></div></div>
+        <div id="toc-bottom" class="toc sidebar"><div class="inner">loading table of contents</div></div>
     </div>
     {% if page.comments != false %}<div class="center"><section id="disqus_thread"></section></div><!-- /#disqus_thread -->{% endif %}
     {% if site.related_posts.size > 0 %}<div class="center">{% include read-more.html %}</div>{% endif %}

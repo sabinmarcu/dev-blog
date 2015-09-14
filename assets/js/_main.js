@@ -55,10 +55,10 @@ $(document).ready(function() {
           return _i.height() + parseInt(_i.css("padding-top")) + parseInt(_i.css("padding-bottom"))
       }, getOffset = function() {
           var _h = $(".entry-content").height();
-          return _h + getHeight() - getBottom() > 0 ? getBottom() : _h + getHeight();
+          return _h - getBottom() > 0 ? getBottom() : _h;
       };
       var scrollFunc = function() {
-          jQuery("#issue-me").css({"bottom": "auto", "top": getOffset() - getHeight()})
+          jQuery("#issue-me").css({"bottom": $(".entry-content").height() - getOffset() - getHeight()})
       };
       $(window).scroll(scrollFunc);
       $(window).resize(scrollFunc);

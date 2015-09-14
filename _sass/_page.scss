@@ -49,7 +49,7 @@ body {
 		overflow: hidden;
 		padding: $footer-padding;
 		background: white;
-		transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+		transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 		h2, h1 {
 			margin: 0;
 			padding: 0;
@@ -57,7 +57,15 @@ body {
 			font-weight: 100;
 		}
 		h2 {
-			color: #888;
+			color: #999;
+			transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+		}
+		&:hover {
+			height: 100px;
+			margin-top: -50px;
+			h2 {
+				color: #444;
+			}
 		}
 	}
 	&::after {
