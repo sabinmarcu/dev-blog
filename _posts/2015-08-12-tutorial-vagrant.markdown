@@ -186,11 +186,11 @@ Dacă totul este corect, va trebui să apară shell-ul în felul urmator:
 - `vagrant halt` , pentru a opri mașina
 - `vagrant ssh` , pentru a deschide shell-ul mașinii create
 - `vagrant reload`, pentru a reporni mașina
-- `vagrant distroy`, pentru a șterge mașina și toate configurările acesteia
+- `vagrant destroy`, pentru a șterge mașina și toate configurările acesteia
 - `vagrant status` , pentru a verifica statusul mașinii Vagrant (dacă este pornită, oprită, creată, etc)
 - `vagrant version` , pentru a afișa versiunea de Vagrant instalată
 
-Sfat și mic exercițiu: deschideți un Command Prompt și rulați ` vagrant ` pentru a vedea lista tuturor comenzilor disponibile Și o scurtă descriere pentru fiecare, apoi rulați fiecare comandă afișată cu opțiunea ` -h ` (de exemplu, pentru ` init `, rulați ` vagrant init -h ` și așa mai departe cu toate).
+Sfat și mic exercițiu: deschideți un Command Prompt și rulați `vagrant` pentru a vedea lista tuturor comenzilor disponibile Și o scurtă descriere pentru fiecare, apoi rulați fiecare comandă afișată cu opțiunea `-h` (de exemplu, pentru `init`, rulați `vagrant init -h` și așa mai departe cu toate).
 
 ### _Box_-uri posibile
 
